@@ -1,0 +1,39 @@
+{
+  "name": "combinations-ts",
+  "version": "0.0.1",
+  "description": "A typescript utility",
+  "types": "./lib/cjs/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "access": "public",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm run build && npm publish",
+    "prepublishOnly": "npm run build",
+    "clean": "del -rf ./lib",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadamkhan7679/combinations-ts.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "combinations"
+  ],
+  "author": "Sadam Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sadamkhan7679/combinations-ts/issues"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "homepage": "https://github.com/sadamkhan7679/combinations-ts#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
